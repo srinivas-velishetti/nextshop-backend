@@ -1,0 +1,63 @@
+{
+  "info": {
+    "name": "NextShop Auth Service",
+    "_postman_id": "1234-5678-9012-3456",
+    "description": "Postman collection for testing Auth Service (Register, Login, JWT)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"srinivas\",\n  \"password\": \"mypassword\",\n  \"role\": \"ADMIN\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/auth/register"
+        }
+      }
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"srinivas\",\n  \"password\": \"mypassword\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/auth/login"
+        }
+      }
+    },
+    {
+      "name": "Validate Token",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <Paste your JWT here>"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8081/api/secure/test"
+        }
+      }
+    }
+  ]
+}

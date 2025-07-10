@@ -1,11 +1,13 @@
-package com.nextshop.orderservice;
+package com.nextshop.auth;
+
+// Author: Srinivas Velishetti
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OrderserviceApplication {
+public class AuthServiceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(OrderserviceApplication.class, args);
+        SpringApplication.run(AuthServiceApplication.class, args);
     }
 }
