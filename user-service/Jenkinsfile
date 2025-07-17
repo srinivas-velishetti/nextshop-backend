@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     AWS_REGION = 'us-east-1'
-    ECR_REPO   = '123456789012.dkr.ecr.us-east-1.amazonaws.com/product-service'
+    ECR_REPO   = '123456789012.dkr.ecr.us-east-1.amazonaws.com/user-service'
     IMAGE_TAG  = 'latest'
   }
   stages {
